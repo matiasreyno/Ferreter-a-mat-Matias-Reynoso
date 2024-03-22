@@ -1,3 +1,6 @@
+-- link de la presentacion: 
+-- https://my.visme.co/view/pvm9e4p4-ferreteria-mat
+
 drop database if exists ferreteria_mat ;
 create database ferreteria_mat ;
 
