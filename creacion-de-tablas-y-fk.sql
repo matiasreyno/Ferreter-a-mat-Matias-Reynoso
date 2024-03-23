@@ -1,5 +1,8 @@
 -- link de la presentacion: 
+
 -- https://my.visme.co/view/pvm9e4p4-ferreteria-mat
+
+-- DER: https://excalidraw.com/#json=khYowZ0laOARMT80SGduy,_zYN3qnehFC27AK8JgaCzg
 
 drop database if exists ferreteria_mat ;
 create database ferreteria_mat ;
