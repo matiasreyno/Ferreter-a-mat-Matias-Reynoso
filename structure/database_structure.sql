@@ -1,92 +1,94 @@
-DROP DATABASE IF EXISTS ferreteria_mat;
-CREATE DATABASE IF NOT EXISTS ferreteria_mat;
+ drop database if exists ferreteria_mat;
+ create database ferreteria_mat;
 
-USE ferreteria_mat;
 
-CREATE TABLE clientes (
-     id_clientes   INT PRIMARY KEY AUTO_INCREMENT
-,    nombre        VARCHAR(100)
-,    direccion     VARCHAR(150)
-,    fecha         DATE
-,    tel           VARCHAR(50)
-,    id_producto   INT
-,    id_compra     INT
+ use ferreteria_mat ;
+
+
+create table clientes (
+        id_clientes      int primary key not null auto_increment 
+,       nombre           varchar(100) 
+,       direccion        varchar(150) 
+,       fecha            date 
+,       tel              varchar(50)  
+		
+) ;
+
+-- select * from ferreteria_mat.clientes ;
+create table compra (
+	 id_compra    int primary key not null auto_increment
+,    fecha        date
+,    total        decimal(20,0)
+,    id_producto  int
+,    id_venta     int
+,    id_clientes  int
 
 ) ;
-CREATE TABLE compra (
-	 id_compra    INT PRIMARY KEY AUTO_INCREMENT
-,    fecha        DATE
-,    total        DECIMAL(20,0)
-,    id_producto  INT
-,    id_venta     INT
-,    id_clientes  INT
+create table venta (
+	 id_venta    int primary key auto_increment
+,    fecha       date
+,    total       decimal(20,0)
+,    id_producto int
+,    id_compra   int
 
 ) ;
-CREATE TABLE venta (
-	 id_venta    INT PRIMARY KEY AUTO_INCREMENT
-,    fecha       DATE
-,    total       DECIMAL(20,0)
-,    id_producto INT
-,    id_compra   INT
-
-) ;
-CREATE TABLE producto (
-     id_producto  INT PRIMARY KEY AUTO_INCREMENT
-,    nombre       VARCHAR(200)
+create table producto (
+     id_producto  int primary key auto_increment
+,    nombre       varchar(200)
 ,    descripcion  TEXT
-,    precio       DECIMAL(20,00)
-,    stock        INT
-,    id_proveedor INT
-,    id_clientes  INT
-,    id_compra    INT
-,    id_venta     INT
+,    precio       decimal(20,00)
+,    stock        int
+,    id_proveedor int
+,    id_clientes  int
+,    id_compra    int
+,    id_venta     int
 
 ) ;
-CREATE TABLE proveedor (
-     id_proveedor  INT PRIMARY KEY AUTO_INCREMENT
-,    nombre        VARCHAR(200)
-,    dereccion     VARCHAR(200)
-,    tel           VARCHAR(50)
-,    mail          VARCHAR(200)
-,    id_producto   INT
-,    id_compra     INT
+create table proveedor (
+     id_proveedor  int primary key auto_increment
+,    nombre        varchar(200)
+,    dereccion     varchar(200)
+,    tel           varchar(50)
+,    mail          varchar(200)
+,    id_producto   int
+,    id_compra     int
 ) ;
 
 
 -- fk tabla cliente
 
-ALTER TABLE  clientes
-   ADD CONSTRAINT fk_clientes_compra
-    FOREIGN KEY(id_compra) REFERENCES compra(id_compra) ;
+alter table  clientes
+   add constraint fk_clientes_compra
+    foreign key(id_compra) references compra(id_compra) ;
 
-ALTER TABLE  clientes
-   ADD CONSTRAINT fk_clientes_producto
-    FOREIGN KEY(id_producto) REFERENCES producto(id_producto) ;
+alter table  clientes
+   add constraint fk_clientes_producto
+    foreign key(id_producto) references producto(id_producto) ;
 
 -- fk compra
     
-    ALTER TABLE  compra
-   ADD CONSTRAINT fk_compra_producto
-    FOREIGN KEY(id_producto) REFERENCES producto(id_producto) ;
+    alter table  compra
+   add constraint fk_compra_producto
+    foreign key(id_producto) references producto(id_producto) ;
     
-     ALTER TABLE  compra
-   ADD CONSTRAINT fk_compra_venta
-    FOREIGN KEY(id_venta) REFERENCES venta(id_venta) ;
+     alter table  compra
+   add constraint fk_compra_venta
+    foreign key(id_venta) references venta(id_venta) ;
     
 -- fk venta
 
- ALTER TABLE  venta
-   ADD CONSTRAINT fk_venta_producto
-    FOREIGN KEY(id_producto) REFERENCES producto(id_producto) ;    
+ alter table  venta
+   add constraint fk_venta_producto
+    foreign key(id_producto) references producto(id_producto) ;    
     
 -- fk producto 
 
-ALTER TABLE  producto
-   ADD CONSTRAINT fk_producto_proveedor
-    FOREIGN KEY(id_proveedor) REFERENCES proveedor(id_proveedor) ;     
+alter table  producto
+   add constraint fk_producto_proveedor
+    foreign key(id_proveedor) references proveedor(id_proveedor) ;     
     
 -- fk proveedor 
 
-ALTER TABLE  proveedor
-   ADD CONSTRAINT fk_proveedor_compra
-    FOREIGN KEY(id_compra) REFERENCES compra(id_compra) ;
+alter table  proveedor
+   add constraint fk_proveedor_compra
+    foreign key(id_compra) references compra(id_compra) ;
