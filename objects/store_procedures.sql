@@ -1,4 +1,4 @@
-use ferreteria_mat ;
+USE ferreteria_mat ;
 
 delimiter //
 
@@ -6,8 +6,8 @@ create procedure if not exists obtener_producto_mas_vendido(view_P varchar(50))
 begin
      declare vista varchar(250);
               select
-                    * into vista
-                             from view_P;
+                    view_P into vista
+                             from DUAL;
 end //
 
 delimiter ;
