@@ -55,38 +55,38 @@ CREATE TABLE proveedor (
 
 -- fk tabla cliente
 
-alter table  clientes
-    add constraINT fk_clientes_compra
-    foreign key (id_compra) references compra (id_compra) ;
+ALTER TABLE  clientes
+   ADD CONSTRAINT fk_clientes_compra
+    FOREIGN KEY(id_compra) REFERENCES compra(id_compra) ;
 
-alter table  clientes
-    add constraINT fk_clientes_producto
-    foreign key (id_producto) references producto (id_producto) ;
+ALTER TABLE  clientes
+   ADD CONSTRAINT fk_clientes_producto
+    FOREIGN KEY(id_producto) REFERENCES producto(id_producto) ;
 
 -- fk compra
     
-    alter table  compra
-    add constraINT fk_compra_producto
-    foreign key (id_producto) references producto (id_producto) ;
+    ALTER TABLE  compra
+   ADD CONSTRAINT fk_compra_producto
+    FOREIGN KEY(id_producto) REFERENCES producto(id_producto) ;
     
-     alter table  compra
-    add constraINT fk_compra_venta
-    foreign key (id_venta) references venta (id_venta) ;
+     ALTER TABLE  compra
+   ADD CONSTRAINT fk_compra_venta
+    FOREIGN KEY(id_venta) REFERENCES venta(id_venta) ;
     
 -- fk venta
 
- alter table  venta
-    add constraINT fk_venta_producto
-    foreign key (id_producto) references producto (id_producto) ;    
+ ALTER TABLE  venta
+   ADD CONSTRAINT fk_venta_producto
+    FOREIGN KEY(id_producto) REFERENCES producto(id_producto) ;    
     
 -- fk producto 
 
-alter table  producto
-    add constraINT fk_producto_proveedor
-    foreign key (id_proveedor) references proveedor (id_proveedor) ;     
+ALTER TABLE  producto
+   ADD CONSTRAINT fk_producto_proveedor
+    FOREIGN KEY(id_proveedor) REFERENCES proveedor(id_proveedor) ;     
     
 -- fk proveedor 
 
-alter table  proveedor
-    add constraINT fk_proveedor_compra
-    foreign key (id_compra) references compra (id_compra) ;
+ALTER TABLE  proveedor
+   ADD CONSTRAINT fk_proveedor_compra
+    FOREIGN KEY(id_compra) REFERENCES compra(id_compra) ;
