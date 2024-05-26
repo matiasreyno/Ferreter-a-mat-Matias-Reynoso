@@ -1,6 +1,6 @@
 USE ferreteria_mat ;
 
-delimiter //
+DELIMITER //
 
 create procedure if not exists obtener_producto_mas_vendido(view_P varchar(50))
 begin
@@ -10,13 +10,13 @@ begin
                              from DUAL;
 end //
 
-delimiter ;
+DELIMITER ;
 
 
 call obtener_producto_mas_vendido("vista_producto_mas_vendido_proveedor");
 
 
-delimiter //
+DELIMITER //
 
 create procedure obtener_stock_total_por_proveedor(in proveedor_id int)
 begin
@@ -37,7 +37,7 @@ begin
         prov.id_proveedor = proveedor_id;
 end //
 
-delimiter ;
+DELIMITER ;
 
 
 call obtener_stock_total_por_proveedor(1);
