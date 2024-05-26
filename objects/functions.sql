@@ -1,4 +1,4 @@
-USE ferreteria_mat ;
+use ferreteria_mat ;
 
 delimiter //
 
@@ -52,4 +52,4 @@ end //
 delimiter ;
 
 
-select calcular_total_ventas_cliente(1, '2023-01-01', '2023-12-31') AS total_ventas;
+select calcular_total_ventas_cliente(1, '2023-01-01', '2023-12-31') as total_ventas;
