@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS ferreteria_mat ;
-CREATE DATABASE IF NOT EXISTS ferreteria_mat ;
+DROP DATABASE IF EXISTS ferreteria_mat;
+CREATE DATABASE IF NOT EXISTS ferreteria_mat;
 
-USE ferreteria_mat ;
+USE ferreteria_mat;
 
 CREATE TABLE clientes (
      id_clientes   INT PRIMARY KEY AUTO_INCREMENT
