@@ -7,7 +7,7 @@ begin
      declare vista varchar(250);
               select
                     * into vista
-                             from view_P);
+                             from view_P;
 end //
 
 delimiter ;
