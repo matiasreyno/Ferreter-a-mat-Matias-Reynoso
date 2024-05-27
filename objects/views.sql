@@ -56,8 +56,8 @@ join
     proveedor prov on p.id_producto = prov.id_producto
 join 
     (select 
-        v.id_producto, 
-        count(v.id_venta) as total_ventas
+         p.id_producto, 
+        COUNT(v.id_venta) AS total_ventas
      from 
         producto p
      join 
