@@ -2,15 +2,18 @@ use ferreteria_mat ;
 
 delimiter //
 
-create procedure obtener_producto_mas_vendido()
+create procedure if not exists obtener_producto_mas_vendido(view_p varchar (50))
 begin
-    select * from vista_producto_mas_vendido_proveedor;
+     declare vista varchar(250);
+            select 
+                view_p into vista 
+                       from dual;                      
 end //
 
 delimiter ;
 
 
-call obtener_producto_mas_vendido();
+call obtener_producto_mas_vendido("vista_producto_mas_vendido_proveedor");
 
 
 delimiter //
