@@ -55,6 +55,17 @@ create table proveedor (
 ) ;
 
 
+
+create table historial_precios (
+    id int auto_increment primary key,
+    id_producto int,
+    precio_anterior decimal(20, 2),
+    nuevo_precio decimal(20, 2),
+    fecha_cambio timestamp default current_timestamp
+);
+
+
+
 -- fk tabla cliente
 
 alter table  clientes
