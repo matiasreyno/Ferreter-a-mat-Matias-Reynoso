@@ -1,6 +1,6 @@
 use ferreteria_mat ;
 
-create user 'gerente_de_venta_user'@'localhost' identified by 'gerente_password';
+create user 'gerente_de_venta_user'@'localhost' identified by 'manager_password';
 create user 'cajero_user'@'localhost' identified by 'cajero_password';
 
 create role gerente_de_venta;
