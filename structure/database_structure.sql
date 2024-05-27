@@ -92,4 +92,10 @@ alter table compra
    foreign key (id_clientes) references clientes (id_clientes) ;
    
 
+ 
+alter table historial_precios
+   add constraint __fk_historial_precios_producto
+   foreign key (id_producto) references producto (id_producto) ;
+
+
 
