@@ -80,7 +80,7 @@ end //
 delimiter ;
 
 
-call registrar_venta_y_actualizar_stock(2, '2023-05-22', 100.00, 2);
+-- call registrar_venta_y_actualizar_stock(2, '2023-05-22', 100.00, 2);
 
 
 

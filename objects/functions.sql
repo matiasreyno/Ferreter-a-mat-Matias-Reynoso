@@ -27,8 +27,9 @@ delimiter ;
 select calcular_total_ventas_producto(1, '2023-01-01', '2023-12-31') as total_ventas;
 
 
-delimiter //
 
+delimiter //
+drop function if exists calcular_total_ventas_cliente;
 create function calcular_total_ventas_cliente(
     cliente_id int,
     fecha_inicio date,
@@ -43,7 +44,7 @@ begin
     select sum(v.total) into total_ventas
     from compra c
     join venta v on c.id_compra = v.id_venta
-    where c.id_cliente = cliente_id
+    where c.id_clientes = id_clientes
       and v.fecha between fecha_inicio and fecha_fin;
 
     return ifnull(total_ventas, 0);
