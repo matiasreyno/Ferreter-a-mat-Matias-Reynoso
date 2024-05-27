@@ -63,7 +63,7 @@ join
      join 
         venta v on p.id_venta = v.id_venta
      group by 
-        v.id_producto
+        p.id_producto
      order by 
         total_ventas desc
      limit 1) as ventas_mas_altas on p.id_producto = ventas_mas_altas.id_producto;
