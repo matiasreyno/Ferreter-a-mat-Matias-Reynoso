@@ -48,16 +48,16 @@ insert into venta(fecha,total,id_compra) values
 
 
 insert into producto(nombre,precio,stock,id_venta) values
-("amoladora-angular",29500,20,10),
-("taladro-destornillador-inal.",50000,50,10),
-("tester",10000,15,15),
-("martillo",5000,50,20),
-("juego-de-pinzas",8000,40,11),
-("pinza-de-punta",7000,60,80),
-("tornillosmadera1pulgada",5000,100,10),
-("tenaza",8000,20,30),
-("destornillador",6000,150,50),
-("termica25a",10000,30,150);
+("amoladora-angular",29500,20,1),
+("taladro-destornillador-inal.",50000,50,2),
+("tester",10000,15,3),
+("martillo",5000,50,4),
+("juego-de-pinzas",8000,40,5),
+("pinza-de-punta",7000,60,6),
+("tornillosmadera1pulgada",5000,100,7),
+("tenaza",8000,20,8),
+("destornillador",6000,150,9),
+("termica25a",10000,30,10);
 
 
 

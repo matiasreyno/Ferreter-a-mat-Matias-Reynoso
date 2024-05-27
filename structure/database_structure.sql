@@ -28,7 +28,7 @@ create table compra  (
 
 
 create table venta  (
-	   id_venta      int primary key not null auto_increment 
+	    id_venta      int primary key not null auto_increment 
 ,      fecha         date 
 ,      total         decimal(20,0)  
 ,      id_compra     int
@@ -48,7 +48,7 @@ create table producto (
 
 
 create table proveedor  (
-	   id_proveedor     int primary key not null auto_increment
+	   id_proveedor      int  primary key not null auto_increment
 ,      nombre           varchar(200) 
 ,      dereccion        varchar(200) 
 ,      tel              varchar(50) 
