@@ -269,6 +269,30 @@ Gestión de Transacciones: Utiliza transacciones para asegurar que ambas operaci
 
 Con este procedimiento almacenado, puedes registrar una venta y actualizar el stock del producto en una única operación, asegurando que siempre haya suficiente stock antes de registrar la venta.
 
+### Documentación de Vistas
+
+---
+
+### Listado de Vistas
+
+**Vista 1 :  vista_clientes_compras**
+
+<img src="./imagenes/views_1.png" style="width: 100% ; aspect-ratio:16/9">
+
+Esto te proporcionará una combinación de datos de los clientes y sus compras, facilitando el análisis de la información en una sola consulta.
+
+**Vista 2 :  vista_productos_proveedores**
+
+<img src="./imagenes/vista_2.png" style="width: 100% ; aspect-ratio:16/9">
+
+Esto te proporcionará una combinación de datos de los productos y sus proveedores, facilitando el análisis de la información en una sola consulta.
+
+**Vista 3 :  vista_producto_mas_vendido_proveedor**
+
+<img src="./imagenes/views_3.png" style="width: 100% ; aspect-ratio:16/9">
+
+Esta vista te proporcionará una combinación de datos del producto más vendido y su proveedor, facilitando el análisis de la información en una sola consulta.
+
 ## Roles y permisos
 
 ## Back up de la base de datos
