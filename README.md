@@ -141,7 +141,27 @@ Registra los cambios en los precios de los productos a lo largo del tiempo.
 
 ## Estructura e ingesta de datos
 
+**Captura Inicial:** Los datos son ingresados manualmente.
+
+**Validación:** Los datos son validados para asegurar que cumplen con los formatos y restricciones de la base de datos.
+
+**Inserción/Actualización:** Los datos son insertados en las tablas correspondientes usando comandos SQL.
+
+**Verificación:** Después de la inserción/actualización, se realizan verificaciones para asegurar que los datos se han ingresado correctamente.
+
+**Monitoreo y Mantenimiento:** Se monitorean los datos para detectar y corregir cualquier inconsistencia, además de realizar mantenimientos periódicos para optimizar la base de datos.
+
 ## Objetos de la base de datos
+
+Los objetos de la base de datos se ubican en la carpeta objects, con un archivo sql para cada tipo de objeto:
+- Funciones : a_funtions.sql
+- Triggers : b_triggers.sql
+- Prodecimientos almacenados : c_stored_procedures.sql
+- Vistas : d_views.sql
+- Roles, permisos y usuarios : e_roles_users.sql 
+
+A continuación, se desarrolla la documentación de cada uno de ellos.
+
 
 ## Roles y permisos
 
