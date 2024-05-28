@@ -297,7 +297,7 @@ Esta vista te proporcionará una combinación de datos del producto más vendido
 
 Se generaron los siguientes roles:
 
-<img src="./imagenes/creacion-de-roles.png" style="width: 80% ; aspect-ratio:16/9">
+<img src="./imagenes/creacion-de-roles.png" style="width: 60% ; aspect-ratio:16/9">
 
 Y los siguientes permisos:
 
