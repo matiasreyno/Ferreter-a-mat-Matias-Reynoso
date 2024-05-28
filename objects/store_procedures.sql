@@ -50,7 +50,8 @@ create procedure registrar_venta_y_actualizar_stock(
     in p_id_compra int,
     in p_fecha date,
     in p_total decimal(20, 2),
-    in p_cantidad int
+    in p_cantidad int,
+    in p_id_producto int
 )
 begin
     declare v_stock_actual int;
