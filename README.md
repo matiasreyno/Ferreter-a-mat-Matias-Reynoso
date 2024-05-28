@@ -295,9 +295,29 @@ Esta vista te proporcionará una combinación de datos del producto más vendido
 
 ## Roles y permisos
 
+Se generaron los siguientes roles:
+
+<img src="./imagenes/creacion-de-roles.png" style="width: 100% ; aspect-ratio:16/9">
+
+Y los siguientes permisos:
+
+<img src="./imagenes/permisos-roles.png" style="width: 100% ; aspect-ratio:16/9">
+
+**Administrador (admin):** Tiene todos los permisos, incluyendo la creación y modificación de tablas, vistas, funciones y triggers.
+
+**Gerente de Ferreteria:** Puede ver y modificar datos relacionados con ventas y clientes, pero no puede modificar la estructura de la base de datos.
+
+**Cajero:** Puede insertar y actualizar registros de ventas y productos, pero no puede eliminar registros ni modificar la estructura de la base de datos.
+
 ## Back up de la base de datos
 
 ## Herramientas y tecnologias usadas
+
+* MySQL (motor de bases de datos, version 8.0.36)
+* MySQL Workbench (interfaz gráfica, version 8.0.36)
+* Makefile (para generar una interfaz sencilla de procesos)
+* Docker (para generar un container)
+* GitHub (para entregar el proyecto)
 
 ## Como levantar el proyecto en CodeSpaces GitHub
 * env: Archivo con contraseñas y data secretas
