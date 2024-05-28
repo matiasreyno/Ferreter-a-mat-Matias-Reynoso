@@ -64,11 +64,11 @@ La gestión de clientes puede incluir mantener un registro de compras, contacto 
 
 ## Diagrama entidad relacion (DER)
 
-<img src="./imagenes/der_ferreteria_mat.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/der_ferreteria_mat.png" style="width: 80% ; aspect-ratio:16/9">
 
 ## Listado de tablas y descripcion
 
-<img src="./imagenes/tabla-clientes.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/tabla-clientes.png" style="width: 80% ; aspect-ratio:16/9">
 
 **Tabla clientes**
 
@@ -81,7 +81,7 @@ Contiene la información de los clientes que compran productos en la ferretería
 **tel** (varchar(50)): Teléfono de contacto del cliente.
 **id_compra** (int, FK): Clave foránea que referencia a la tabla compra.
 
-<img src="./imagenes/tabla-compra.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/tabla-compra.png" style="width: 80% ; aspect-ratio:16/9">
 
 **Tabla compra**
 Registra las compras realizadas por los clientes.
@@ -93,7 +93,7 @@ Registra las compras realizadas por los clientes.
 sql
 
 
-<img src="./imagenes/tabla-venta.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/tabla-venta.png" style="width: 80% ; aspect-ratio:16/9">
 
 **Tabla venta**
 Registra las ventas realizadas por la ferretería.
@@ -103,7 +103,7 @@ Registra las ventas realizadas por la ferretería.
 **total** (decimal(20, 2)): Monto total de la venta.
 **id_compra** (int, FK): Clave foránea (si corresponde) que podría usarse para relacionar compras (dependiendo del contexto específico).
 
-<img src="./imagenes/tabla-producto.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/tabla-producto.png" style="width: 80% ; aspect-ratio:16/9">
 
 **Tabla producto**
 Almacena información sobre los productos que la ferretería vende.
@@ -114,7 +114,7 @@ Almacena información sobre los productos que la ferretería vende.
 **stock**(int): Cantidad de producto disponible en inventario.
 **id_venta** (int, FK): Clave foránea que referencia a la tabla venta.
 
-<img src="./imagenes/tabla-proveedor.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/tabla-proveedor.png" style="width: 80% ; aspect-ratio:16/9">
 
 **Tabla proveedor**
 Contiene la información de los proveedores de los productos.
@@ -128,7 +128,7 @@ Contiene la información de los proveedores de los productos.
 sql
 
 
-<img src="./imagenes/tabla-historial-precios.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/tabla-historial-precios.png" style="width: 80% ; aspect-ratio:16/9">
 
 **Tabla historial_precios**
 Registra los cambios en los precios de los productos a lo largo del tiempo.
