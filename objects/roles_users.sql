@@ -1,6 +1,6 @@
-use ferreteria_mat;
+USE mysql;
 
---create user 'admin_user'@'localhost' identified by 'admin_password';
+create user 'admin_user'@'localhost' identified by 'admin_password';
 create user 'gerente_ferreteria_user'@'localhost' identified by 'gerente_password';
 create user 'cajero_user'@'localhost' identified by 'cajero_password';
 
