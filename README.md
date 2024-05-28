@@ -20,7 +20,7 @@
 
  - [Temática del Proyecto](#temática-del-proyecto)
  - [Modelo de Negocio](#modelo-de-negocio)
- - [Diagrama Entidad-Relación](#diagrama-entidad-relación)
+ - [Diagrama Entidad-Relacion](#diagrama-entidad-relacion)
  - [Listado de Tablas y Descripción](#listado-de-tablas-y-descripción)
  - [Ingesta de Datos](#ingesta-de-datos)
  - [Objetos de la Base de Datos](#objetos-de-la-base-de-datos)
@@ -62,7 +62,7 @@ La gestión de ventas incluye registrar transacciones, actualizar el inventario 
 Los clientes pueden ser individuos o empresas que compran productos de la ferretería.
 La gestión de clientes puede incluir mantener un registro de compras, contacto para promociones y seguimiento de satisfacción.
 
-## Diagrama entidad relacion 
+## Diagrama Entidad-Relacion 
 
 <img src="./imagenes/der_ferreteria_mat.png" style="width: 80% ; aspect-ratio:16/9">
 
