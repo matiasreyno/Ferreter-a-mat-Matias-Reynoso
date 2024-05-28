@@ -45,7 +45,7 @@ call obtener_stock_total_por_proveedor(1);
 
 
 delimiter //
-
+drop procedure if exists registrar_venta_y_actualizar_stock;
 create procedure registrar_venta_y_actualizar_stock(
     in p_id_producto int,
     in p_fecha date,
@@ -81,6 +81,4 @@ delimiter ;
 
 
 call registrar_venta_y_actualizar_stock(1, '2023-05-22', 100.00, 2);
-
-
 
