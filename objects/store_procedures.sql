@@ -47,7 +47,7 @@ call obtener_stock_total_por_proveedor(1);
 delimiter //
 drop procedure if exists registrar_venta_y_actualizar_stock;
 create procedure registrar_venta_y_actualizar_stock(
-    in p_id_producto int,
+    in p_id_compra int,
     in p_fecha date,
     in p_total decimal(20, 2),
     in p_cantidad int
