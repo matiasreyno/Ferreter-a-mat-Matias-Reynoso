@@ -63,8 +63,8 @@ begin
     -- verificar si hay suficiente stock
     if v_stock_actual >= p_cantidad then
         -- registrar la venta en la tabla de ventas
-        insert into venta (fecha, total, id_producto)
-        values (p_fecha, p_total, p_id_producto);
+        insert into venta (fecha, total, id_compra)
+        values (p_fecha, p_total, p_id_compra);
 
         -- actualizar el stock del producto
         update producto
@@ -80,7 +80,7 @@ end //
 delimiter ;
 
 
-call registrar_venta_y_actualizar_stock(2, '2023-05-22', 100.00, 2);
+call registrar_venta_y_actualizar_stock(1, '2023-05-22', 100.00, 2);
 
 
 
