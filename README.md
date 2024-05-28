@@ -1,16 +1,16 @@
 <center>
-<img src="https://objetivo.news/download/multimedia.normal.bcba10cea1861629.Y29kZXJob3VzZS1xdWUtZXMtcXVlLWhhY2VuX25vcm1hbC53ZWJw.webp" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/ferreteria-mat-1.png" style="width: 100% ; aspect-ratio:16/9">
 </center>
 
 
 # <center>Entrega de proyecto final</center>
-@Alumno
+@Alumno: Matias Reynoso
 
-@Comision
+@Comision: 53180
 
-@Tutor
+@Tutor: Santiago Angel Gonzalez Martin
 
-@Docente
+@Docente: Anderson Michel Torres
 
 
 
@@ -45,6 +45,8 @@
 ## Modelo de negocio
 
 ## Diagrama entidad relacion (DER)
+
+<img src="./imagenes/der_ferreteria_mat.png" style="width: 50% ; aspect-ratio:16/9">
 
 ## Listado de tablas y descripcion
 
