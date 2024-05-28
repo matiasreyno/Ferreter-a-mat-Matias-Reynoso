@@ -211,14 +211,14 @@ Con esta función, puedes calcular fácilmente el total de ventas de un cliente 
 Actualizar el Stock del Producto al Realizar una Venta
 Este trigger se activará después de insertar una nueva venta en la tabla venta y reducirá el stock del producto correspondiente en la tabla producto.
 
-<img src="./imagenes/trigger1.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/trigger1.png" style="width: 60% ; aspect-ratio:16/9">
 
 **Trigger 2 : before_producto_update**
 
 Registrar el Historial de Precios de un Producto
 Este trigger se activará antes de actualizar el precio de un producto en la tabla producto y registrará el cambio en una tabla de historial de precios.
 
-<img src="./imagenes/trigger2.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/trigger2.png" style="width: 80% ; aspect-ratio:16/9">
 
 ### Documentación de Procedimientos Almacenados
 
@@ -236,7 +236,7 @@ El objetivo del procedimiento almacenado obtener_producto_mas_vendido es proporc
  **Funcionalidad:**
 La funcionalidad del procedimiento es ejecutar una consulta sobre la vista vista_producto_mas_vendido_proveedor y devolver el conjunto de resultados correspondiente. Esto facilita la obtención de información específica y útil sobre las ventas y los proveedores sin necesidad de escribir consultas SQL complejas cada vez que se necesita esta información.
 
-<img src="./imagenes/procedimiento_1.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/procedimiento_1.png" style="width: 60% ; aspect-ratio:16/9">
 
 Con este procedimiento almacenado, puedes obtener fácilmente la información del producto más vendido y su proveedor cada vez que lo necesites, simplificando el proceso de recuperación de datos específicos en la base de datos.
 
@@ -249,7 +249,7 @@ El objetivo del procedimiento obtener_stock_total_por_proveedor es proporcionar 
 Funcionalidad:
 La funcionalidad del procedimiento es recibir un proveedor_id como parámetro de entrada y devolver una lista de productos suministrados por ese proveedor, incluyendo el stock disponible y otros detalles relevantes del producto y del proveedor. Esto permite a los gestores de inventario y a los responsables de compras evaluar rápidamente la cantidad de stock disponible de cada proveedor.
 
-<img src="./imagenes/procedimiento-2.png" style="width: 100% ; aspect-ratio:16/9">
+<img src="./imagenes/procedimiento-2.png" style="width: 60% ; aspect-ratio:16/9">
 
 Este procedimiento permitirá obtener fácilmente el stock total de los productos suministrados por un proveedor específico, ayudando en la toma de decisiones relacionadas con la gestión de inventarios y las relaciones con los proveedores.
 
