@@ -62,7 +62,7 @@ La gestión de ventas incluye registrar transacciones, actualizar el inventario 
 Los clientes pueden ser individuos o empresas que compran productos de la ferretería.
 La gestión de clientes puede incluir mantener un registro de compras, contacto para promociones y seguimiento de satisfacción.
 
-## Diagrama entidad relacion (DER)
+## Diagrama entidad relacion 
 
 <img src="./imagenes/der_ferreteria_mat.png" style="width: 80% ; aspect-ratio:16/9">
 
@@ -219,6 +219,55 @@ Registrar el Historial de Precios de un Producto
 Este trigger se activará antes de actualizar el precio de un producto en la tabla producto y registrará el cambio en una tabla de historial de precios.
 
 <img src="./imagenes/trigger2.png" style="width: 100% ; aspect-ratio:16/9">
+
+### Documentación de Procedimientos Almacenados
+
+---
+
+### Listado de procedimientos almacenados
+
+**Procedimiento 1 : obtener_producto_mas_vendido**
+
+**Objetivo:**
+El objetivo del procedimiento almacenado obtener_producto_mas_vendido es proporcionar una forma sencilla y eficiente de acceder a la información del producto más vendido y su proveedor desde la base de datos de la ferretería.
+
+
+
+ **Funcionalidad:**
+La funcionalidad del procedimiento es ejecutar una consulta sobre la vista vista_producto_mas_vendido_proveedor y devolver el conjunto de resultados correspondiente. Esto facilita la obtención de información específica y útil sobre las ventas y los proveedores sin necesidad de escribir consultas SQL complejas cada vez que se necesita esta información.
+
+<img src="./imagenes/procedimiento_1.png" style="width: 100% ; aspect-ratio:16/9">
+
+Con este procedimiento almacenado, puedes obtener fácilmente la información del producto más vendido y su proveedor cada vez que lo necesites, simplificando el proceso de recuperación de datos específicos en la base de datos.
+
+**Procedimiento 2 : obtener_stock_total_por_proveedor**
+
+Funcionalidad del Procedimiento
+Objetivo:
+El objetivo del procedimiento obtener_stock_total_por_proveedor es proporcionar una forma sencilla y eficiente de obtener el stock total de todos los productos suministrados por un proveedor específico. Esto ayuda en la gestión de inventarios y la evaluación de las contribuciones de cada proveedor al negocio.
+
+Funcionalidad:
+La funcionalidad del procedimiento es recibir un proveedor_id como parámetro de entrada y devolver una lista de productos suministrados por ese proveedor, incluyendo el stock disponible y otros detalles relevantes del producto y del proveedor. Esto permite a los gestores de inventario y a los responsables de compras evaluar rápidamente la cantidad de stock disponible de cada proveedor.
+
+<img src="./imagenes/procedimiento-2.png" style="width: 100% ; aspect-ratio:16/9">
+
+Este procedimiento permitirá obtener fácilmente el stock total de los productos suministrados por un proveedor específico, ayudando en la toma de decisiones relacionadas con la gestión de inventarios y las relaciones con los proveedores.
+
+**Procedimiento 3 : registrar_venta_y_actualizar_stock**
+
+**Objetivo**
+El objetivo del procedimiento almacenado registrar_venta_y_actualizar_stock es automatizar el proceso de registrar una nueva venta en la base de datos de la ferretería y actualizar el stock del producto vendido. Este procedimiento garantiza que ambas operaciones (registro de venta y actualización del stock) se realicen de manera atómica, lo que significa que ambas deben completarse exitosamente o ninguna de ellas se ejecutará. Esto ayuda a mantener la integridad de los datos y evita inconsistencias.
+
+**Funcionalidad**
+Registro de Venta: Inserta una nueva entrada en la tabla venta con la información de la venta, como la fecha de la venta, el total de la venta y la referencia a la compra asociada.
+
+Actualización del Stock: Reduce el stock del producto vendido en la tabla producto según la cantidad vendida.
+
+Gestión de Transacciones: Utiliza transacciones para asegurar que ambas operaciones (registro de venta y actualización del stock) se completen de manera consistente.
+
+<img src="./imagenes/procedi-3.png" style="width: 100% ; aspect-ratio:16/9">
+
+Con este procedimiento almacenado, puedes registrar una venta y actualizar el stock del producto en una única operación, asegurando que siempre haya suficiente stock antes de registrar la venta.
 
 ## Roles y permisos
 
