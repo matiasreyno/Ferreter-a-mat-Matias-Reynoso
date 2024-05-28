@@ -163,6 +163,63 @@ Los objetos de la base de datos se ubican en la carpeta objects, con un archivo 
 A continuación, se desarrolla la documentación de cada uno de ellos.
 
 
+### Documentación de Funciones 
+
+---
+
+### Listado de funciones
+
+**Funcion 1 : calcular_total_ventas_producto**
+
+**Funcionalidad de la Función**
+
+**Objetivo:**
+
+El objetivo de la función calcular_total_ventas_producto es proporcionar una forma sencilla de calcular el total de ventas de un producto específico durante un período determinado. Esto es útil para análisis de ventas y planificación de inventarios.
+
+**Funcionalidad:**
+
+La función toma el ID de un producto, una fecha de inicio y una fecha de fin como entrada, y devuelve el total de ventas del producto en ese período. Esto permite a los gerentes de ventas y de inventario evaluar rápidamente el rendimiento de un producto en un rango de fechas específico.
+
+<img src="./imagenes/funcion_1.png" style="width: 100% ; aspect-ratio:16/9">
+
+Con esta función, puedes calcular fácilmente el total de ventas de un producto específico durante un período determinado, proporcionando una herramienta útil para la gestión de ventas y la planificación de inventarios en la ferretería.
+
+
+**Funcion 2 : calcular_total_ventas_cliente**
+
+**Funcionalidad de la Función**
+
+**Objetivo:**
+El objetivo de la función calcular_total_ventas_cliente es proporcionar una forma sencilla de calcular el total de ventas de un cliente específico durante un período determinado. Esto es útil para análisis de ventas, fidelización de clientes y planificación de estrategias de marketing.
+
+**Funcionalidad:**
+La función toma el ID de un cliente, una fecha de inicio y una fecha de fin como entrada, y devuelve el total de ventas del cliente en ese período. Esto permite a los gerentes de ventas y de marketing evaluar rápidamente el rendimiento de un cliente en un rango de fechas específico.
+
+<img src="./imagenes/funcion-2.png" style="width: 100% ; aspect-ratio:16/9">
+
+Con esta función, puedes calcular fácilmente el total de ventas de un cliente específico durante un período determinado, proporcionando una herramienta útil para la gestión de clientes y la planificación de estrategias de ventas en la ferretería.
+
+### Documentación de Triggers 
+
+---
+
+### Listado de triggers
+
+**Trigger 1 : after_venta_insert**
+
+Actualizar el Stock del Producto al Realizar una Venta
+Este trigger se activará después de insertar una nueva venta en la tabla venta y reducirá el stock del producto correspondiente en la tabla producto.
+
+<img src="./imagenes/trigger1.png" style="width: 100% ; aspect-ratio:16/9">
+
+**Trigger 2 : before_producto_update**
+
+Registrar el Historial de Precios de un Producto
+Este trigger se activará antes de actualizar el precio de un producto en la tabla producto y registrará el cambio en una tabla de historial de precios.
+
+<img src="./imagenes/trigger2.png" style="width: 100% ; aspect-ratio:16/9">
+
 ## Roles y permisos
 
 ## Back up de la base de datos
