@@ -64,7 +64,7 @@ La gestión de clientes puede incluir mantener un registro de compras, contacto 
 
 ## Diagrama Entidad-Relacion 
 
-<img src="./imagenes/der_ferreteria_mat.png" style="width: 95% ; aspect-ratio:16/9">
+<img src="./imagenes/der_ferreteria_mat.png" style="width: 100% ; aspect-ratio:16/9">
 
 ## Listado de tablas y descripcion
 
